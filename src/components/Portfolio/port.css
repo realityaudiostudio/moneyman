@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+/*fonts*/
+.mukta-extralight {
+    font-family: "Mukta", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .mukta-light {
+    font-family: "Mukta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .mukta-regular {
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .mukta-medium {
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .mukta-semibold {
+    font-family: "Mukta", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .mukta-bold {
+    font-family: "Mukta", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .mukta-extrabold {
+    font-family: "Mukta", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+/*fonts*/  
+body{
+    margin: 0;
+}
+.navbar
+{
+    background: #D5294D;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+}
+.log
+{
+    margin-top: 28px;
+    margin-bottom: 28px;
+    border-radius: 6px;
+border: 1px solid #FEF2F3;
+background: #D5294D;
+box-shadow: 0px 4px 11.1px 2px rgba(72, 9, 26, 0.25);
+width: 138px;
+height: 44px;
+color: #FEF2F3;
+font-family: Mukta;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  transition: 0.6s;
+}
+.headd
+{
+    color: #FEF2F3;
+font-family: Mukta;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.linker
+{
+    display: inline-flex;
+padding: 3px 9px;
+justify-content: center;
+align-items: center;
+gap: 23px;
+}
+.pova
+{
+    color: #FFF;
+font-family: Mukta;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+}
+
+.log:hover
+{
+    border-radius: 6px;
+border: 1px solid #D5294D;
+background: #FEF2F3;
+color: #D5294D;
+box-shadow: 0px 4px 10.9px 4px rgba(72, 9, 26, 0.25);
+}
+.portfolio
+{
+    background: #FDE6E7;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 134px;
+    /* padding-right: 134px; */
+}
+.medet
+{
+    padding-top: 30px;
+}
+.medet h2{
+    color: #48091A;
+font-family: Mukta;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+margin: 0;
+line-height: 40px;
+}
+.medet p{color: #48091A;
+    font-family: Mukta;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 30px;
+    width: 360px;
+    line-height: 30px;
+    
+}
+
+.sthalam
+{
+    height: 40px;
+    background: #FEF2F3;
+}
+#tbb
+{
+    width: 100%;
+    background-color: #FEF2F3;  ;
+    border-collapse:collapse;
+}
+#tbb th {
+    color: #48091A;
+font-family: Mukta;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+justify-content: space-between;
+padding: 15px;
+  }
+  #tbb tr{
+    text-align: center;
+    background-color: #FEF2F3;
+    color: #48091A;
+font-family: Mukta;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+  }
+  #tbb tr:nth-child(even){background-color: #FBD0D5;}
+  #tbb td{
+    padding: 15px;
+  }
+  /*loginss*/
+  .auth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FEF2F3;
+
+  }
+  .ezhuthukal
+  {
+    display: block;
+    justify-content: center;
+    align-items: center; 
+    padding-left: 61px; 
+  }
+  .ezhuthukal h2{
+    color: #48091A;
+font-family: Mukta;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px;
+margin: 5px;
+  }
+  .ezhuthukal p{
+    color: #811A39;
+font-family: Mukta;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+  }
+  .petty
+  {
+    display: block;
+    justify-content: center;
+    padding-left: 34px;
+  }
+  .petty input{
+    width: 433px;
+height: 51px;
+flex-shrink: 0;
+border-radius: 5px;
+border: 1px solid #EA546C;
+background: #FDE6E7;
+margin-bottom: 18px;
+  }
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: #F27A8A;
+  font-family: Mukta;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 15px;
+  line-height: normal;
+  }
+::placeholder {
+  color: #F27A8A;
+  font-family: Mukta;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px;
+  }
+  .keru{
+    width: 210px;
+height: 51px;
+flex-shrink: 0;
+border-radius: 8px;
+background: #EA546C;
+color: #FEF2F3;
+font-family: Mukta;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+border: none;
+margin-left: 34px;
+  }
+  .erangu
+  {
+    width: 210px;
+height: 51px;
+flex-shrink: 0;
+border-radius: 8px;
+border: 1px solid #EA546C;
+background: #FEF2F3;
+color: #EA546C;
+font-family: Mukta;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 34px;
+  }
+  .padangal img
+  {
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+  }
