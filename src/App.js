@@ -5,17 +5,22 @@ import Login from './pages/Login';
 import ConditionalWrapper from './components/ConditionalWrapper';
 // import './App.css';
 import Signup from './pages/Signup';
+import { UserProvider } from './context/UserContext';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
+   <UserProvider>
     <Router>
       <ConditionalWrapper>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup/>}/>
+          <Route path="/welcome" element={<Welcome/>}/>
         </Routes>
       </ConditionalWrapper>
     </Router>
+    </UserProvider>
   );
 }
 

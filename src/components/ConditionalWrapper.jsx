@@ -9,12 +9,13 @@ function ConditionalWrapper({ children }) {
   const location = useLocation();
   const isLoginPage = location.pathname === '/login';
   const isSignupPage = location.pathname === '/signup';
+  const isWelcomePage = location.pathname === '/welcome';
 
   return (
     <>
-      {!isLoginPage && !isSignupPage && <Navbar />}
+      {!isLoginPage && !isSignupPage && !isWelcomePage && <Navbar />}
       {children}
-      {!isLoginPage && !isSignupPage && (
+      {!isLoginPage && !isSignupPage && !isWelcomePage&& (
         <>
           <Port />
           <BasicTable />
