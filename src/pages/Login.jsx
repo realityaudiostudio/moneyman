@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
 import './login.css';
 import Moneyimg from '../img/mny.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { UserContext } from '../context/UserContext';
+import axios from 'axios';
 
 
 function Login() {
-  const {user} = useContext(UserContext);
     const[userName,setUsername] = useState('');
     const[password,setPassword] = useState('');
     const[error,setError] = useState(false);
@@ -22,13 +20,18 @@ function Login() {
       setPassword(e.target.value);
     }
 
-    function handleLogins()
+    async function handleLogins()
     {
-      if(userName === user?.userName && password === user?.password)
+      const response = await axios.post('http://localhost:4550/login',{
+        userName,
+        password
+      })
+      if(response.data.success)
         {
           navigate('/welcome');
         }
         else{
+          console.error('pani paali guys !')
           setError(true)
         }
     }

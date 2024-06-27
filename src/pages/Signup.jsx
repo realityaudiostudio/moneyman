@@ -4,6 +4,7 @@ import './login.css';
 import Moneyimg from '../img/mny.png';
 import { Link,useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
+import axios from 'axios';
 
 function Signup() {
   const {updateUser} = useContext(UserContext);
@@ -19,7 +20,13 @@ function Signup() {
     if(password===rePass)
       {
     updateUser({name,userName,password,rePass});
+    axios.post('http://localhost:4550/userdata', {
+      name,
+      userName,
+      password
+    })
     navigate('/login');//navigate to login
+
   }
   else{
     setError(true);
