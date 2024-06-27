@@ -7,6 +7,7 @@ import ConditionalWrapper from './components/ConditionalWrapper';
 import Signup from './pages/Signup';
 import { UserProvider } from './context/UserContext';
 import Welcome from './pages/Welcome';
+import ProtectedRoute from './routes/ProtectedRoute';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup/>}/>
-          <Route path="/welcome" element={<Welcome/>}/>
+          <Route path="/welcome" element={ <ProtectedRoute> <Welcome/> </ProtectedRoute>}/>
         </Routes>
       </ConditionalWrapper>
     </Router>
