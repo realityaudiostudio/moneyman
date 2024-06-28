@@ -1,18 +1,22 @@
-// context/UserContext.js
+// UserContext.js
 import React, { createContext, useState } from 'react';
 
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null);
 
-  const updateUser = (userData) => {
-    setUser(userData);
-  };
+    const login = (userData) => {
+        setUser(userData);
+    };
 
-  return (
-    <UserContext.Provider value={{ user, updateUser }}>
-      {children}
-    </UserContext.Provider>
-  );
+    const logout = () => {
+        setUser(null);
+    };
+
+    return (
+        <UserContext.Provider value={{ user, login, logout }}>
+            {children}
+        </UserContext.Provider>
+    );
 };

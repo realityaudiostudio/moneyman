@@ -3,11 +3,11 @@ import { useState ,useContext } from 'react';
 import './login.css';
 import Moneyimg from '../img/mny.png';
 import { Link,useNavigate } from 'react-router-dom';
-import { UserContext } from '../context/UserContext';
+// import { UserContext } from '../context/UserContext';
 import axios from 'axios';
 
 function Signup() {
-  const {updateUser} = useContext(UserContext);
+  // const {login} = useContext(UserContext);
   // const[loginn,setLoginn] = useState([]);
   const[name,setName]=useState('');
   const[userName,setUsername] = useState('');
@@ -19,8 +19,8 @@ function Signup() {
   function handleLogin() {
     if(password===rePass)
       {
-    updateUser({name,userName,password,rePass});
-    axios.post('http://localhost:4550/userdata', {
+    // login({name,userName,password,rePass});
+    axios.post('http://localhost:4550/users', {
       name,
       userName,
       password

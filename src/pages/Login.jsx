@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './login.css';
 import Moneyimg from '../img/mny.png';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from '../context/UserContext';
 
 
 function Login() {
@@ -10,6 +11,7 @@ function Login() {
     const[password,setPassword] = useState('');
     const[error,setError] = useState(false);
     const navigate = useNavigate();
+    const {login} = useContext(UserContext);
     // const [logins,setLogins] = useState([]);
 
     function usrNme(e)
@@ -26,12 +28,14 @@ function Login() {
         userName,
         password
       })
-      if(response.data.success)
+      if(response.data.success === true)
         {
+          // console.log(response.data.usr);
+          login(response.data.usr);
           navigate('/welcome');
         }
         else{
-          console.error('pani paali guys !')
+          console.error('pani paali guys !',response.data.message)
           setError(true)
         }
     }
