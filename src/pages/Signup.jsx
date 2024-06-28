@@ -20,7 +20,7 @@ function Signup() {
     if(password===rePass)
       {
     // login({name,userName,password,rePass});
-    axios.post('http://localhost:4550/users', {
+    axios.post('https://alanjs-server.onrender.com/users', {
       name,
       userName,
       password

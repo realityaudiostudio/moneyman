@@ -24,7 +24,7 @@ function Login() {
 
     async function handleLogins()
     {
-      const response = await axios.post('http://localhost:4550/login',{
+      const response = await axios.post('https://alanjs-server.onrender.com/login',{
         userName,
         password
       })
